@@ -179,13 +179,13 @@ def main():
             torch.save(model.state_dict(), 'tut2-model.pt')
 
         print(f'Epoch: {epoch+1:02}')
-        print(f'\tTrain Loss: {train_loss:.3f} | Train Acc: {train_acc*100:.2f}%')
-        print(f'\t Val. Loss: {valid_loss:.3f} |  Val. Acc: {valid_acc*100:.2f}%')
+        print(f'\tTrain Loss: {train_loss:.3f}, Train Acc: {train_acc*100:.2f}%')
+        print(f'\t Val. Loss: {valid_loss:.3f},  Val. Acc: {valid_acc*100:.2f}%')
 
 
     model.load_state_dict(torch.load('tut2-model.pt'))
     test_loss, test_acc = evaluate(model, test_data, loss_function)
-    print(f'Test Loss: {test_loss:.3f} | Test Acc: {test_acc*100:.2f}%')
+    print(f'Test Loss: {test_loss:.3f}, Test Acc: {test_acc*100:.2f}%')
 
 if __name__ == "__main__":
     main()
